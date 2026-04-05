@@ -16,10 +16,10 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Install CMake and NDK
+      - name: Install CMake 4.1.0
         run: |
           yes | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager --licenses
-          ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager "cmake;3.22.1" "ndk;25.1.8937393"
+          ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager "cmake;4.1.0"
 
       - name: Build AAB
         run: |
