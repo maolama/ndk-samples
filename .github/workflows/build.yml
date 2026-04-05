@@ -16,6 +16,9 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+      - name: Accept Android SDK Licenses
+        run: yes | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager --licenses
+
       - name: Build AAB
         run: |
           chmod +x gradlew
